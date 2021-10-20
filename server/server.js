@@ -2,6 +2,7 @@ import express from 'express';
 import devBundle from './devBundle';
 import path from 'path';
 import template from './../template';
+//const { MongoClient } = require('mongodb');
 import { MongoClient } from 'mongodb';
 
 
@@ -28,6 +29,28 @@ app.listen(port, function onStart(err){
     }
     console.info('Servidor esta rodar na porta %$.', port)
 })
+
+const url = process.env.MONGODB_URI || 'mongodb://localhost:27017';
+const client = new MongoClient(url);
+
+const dbName = 'simples';
+
+async function main() {
+  // Use connect method to connect to the server
+  await client.connect();
+  console.log('Connected successfully to server');
+  const db = client.db(dbName);
+  const collection = db.collection('documents');
+
+  // the following code examples can be pasted here...
+
+  return 'done.';
+}
+
+main()
+  .then(console.log)
+  .catch(console.error)
+  .finally(() => client.close());
 /*
 const url = process.env.MONGODB_URI || 'mongodb://localhost:27017/simples' MongoClient.connect(url, (err, db)
 =>
