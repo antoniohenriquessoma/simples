@@ -1,0 +1,36 @@
+POST http://localhost:3000/api/users/
+Content-Type: application/json
+
+{
+    "name": "wild",
+    "email": "wild@gmail.com",
+    "password": "123456"
+}
+
+###
+
+GET http://localhost:3000/api/users/
+Content-Type: application/json
+
+###
+GET http://localhost:3000/api/users/61741415f2eafd158ca5e67b
+Content-Type: application/json
+
+###
+
+PUT  http://localhost:3000/api/users/61741415f2eafd158ca5e67b
+Content-Type: application/json
+
+{
+    "name": "wild soma",
+    "email": "wildsoma@gmail.com",
+    "password": "123456"
+
+
+}
+
+###
+DELETE  http://localhost:3000/api/users/61741af00be8af121c076ca4
+Content-Type: application/json
+
+###
