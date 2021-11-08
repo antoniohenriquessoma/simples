@@ -108,7 +108,7 @@ export default function Signup(){
                 <DialogContentText>Usuario cadastrado com sucesso</DialogContentText>
             </DialogContent>
             <DialogActions>
-                <Link to="/signup"> <Button color="primary" autoFocus="autoFocus" varient="contained">Cadastrar</Button></Link>
+                <Link to="/signin"><Button color="primary" autoFocus="autoFocus" varient="contained">Cadastrar</Button></Link>
             </DialogActions>
         </Dialog>
     </div>)

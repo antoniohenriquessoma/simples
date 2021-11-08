@@ -58,7 +58,8 @@ export default function Signin(props){
 
         const user = {
             email: values.email || undefined,
-            password: values.password || undefined
+            password: values.password || undefined,
+
         }
         signin(user).then((data) => {
             if(data.error){
@@ -77,8 +78,7 @@ export default function Signin(props){
 
     const {from} = props.location.state || {
         from: {
-            pathname: '/'
-        }
+            pathname: '/'         }
     }
 
     const { redirectToReferrer } = values
